@@ -26,7 +26,7 @@ function Strategy(options, verify) {
     this.validateURL = options.validateURL;
     this.serviceURL = options.serviceURL;
     this.useSaml = options.useSaml || false;
-    this.parsed = url.parse(this.validateBaseURL);
+    this.parsed = url.parse(this.validateBase);
     if (this.parsed.protocol === 'http:') {
         this.client = http;
     } else {
