@@ -21,11 +21,12 @@ function Strategy(options, verify) {
     }
     this.version = options.version || "CAS1.0";
     this.ssoBase = options.ssoBaseURL;
+    this.validateBase = options.validateBaseURL || this.ssoBase;
     this.serverBaseURL = options.serverBaseURL;
     this.validateURL = options.validateURL;
     this.serviceURL = options.serviceURL;
     this.useSaml = options.useSaml || false;
-    this.parsed = url.parse(this.ssoBase);
+    this.parsed = url.parse(this.validateBaseURL);
     if (this.parsed.protocol === 'http:') {
         this.client = http;
     } else {

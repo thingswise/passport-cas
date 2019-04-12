@@ -6,7 +6,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git@github.com:sadne/passport-cas.git"
+    "url": "git@github.com:thingswise/passport-cas.git"
   },
   "keywords": [
     "passport",
